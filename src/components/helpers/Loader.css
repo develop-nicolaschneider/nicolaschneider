@@ -1,0 +1,70 @@
+@import url('/src/assets/styles/App.css');
+
+.slogan-name-div {
+  /*ToDo*/
+  background: deeppink;
+  color: deeppink;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+
+.logo-div {
+  background: var(--gradient-background);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  #svg-logo {
+    fill: var(--logo-color);
+    stroke: var(--logo-color);
+    height: 150px;
+    width: 150px;
+    stroke-width: 0;
+    stroke-dasharray: 16000;
+    fill-opacity: 1;
+    animation: logo-animation 4s infinite;
+  }
+}
+
+.logo-text-div {
+  height: 30px;
+  overflow: hidden;
+  .logo-text {
+    color: var(--logo-font-color);
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    animation: logo-text-animation 3s alternate;
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    stroke-dashoffset: 16000;
+    fill-opacity: 0;
+    stroke-width: 20px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-width: 1px;
+  }
+}
+@keyframes logo-text-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
