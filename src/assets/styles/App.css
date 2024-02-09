@@ -3,6 +3,7 @@
 :root {
     /* google fonts -> standard font for this website */
     color-scheme: light;
+    background: var(--color-platinum);
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
@@ -29,24 +30,27 @@
 }
 
 [color-theme="dark"] {
-    color-scheme: dark;
     --background-color: var(--color-dark-gray);
     --font-color: var(--color-platinum);
     --title-color: var(--color-cerulean);
     --gradient-background: linear-gradient(to bottom right, var(--color-dark-midnight), var(--color-midnight), var(--color-dark-gray));
     --logo-color: var(--color-platinum);
     --logo-font-color: var(--color-platinum);
+
+    color-scheme: dark;
+    background: var(--color-dark-gray);
 }
 
 [color-theme="colored"] {
-    color-scheme: light;
-    background: var(--gradient-background);
     --background-color: var(--gradient-background);
     --font-color: var(--color-dark-gray);
     --title-color: var(--color-cerulean);
     --gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
     --logo-color: var(--color-midnight);
     --logo-font-color: var(--color-midnight);
+
+    color-scheme: light;
+    background: var(--gradient-background);
 }
 
 * {

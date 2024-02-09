@@ -10,7 +10,7 @@ const SiteLoader = () => {
             <div className="logo-div">
                 <svg id="svg-logo" width="100%" height="100%" viewBox="0 0 1601 1600" version="1.1"
                      xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                     xmlSpace="preserve"  xmlnserif="http://www.serif.com/"
+                     xmlSpace="preserve"
                      fill="current" fillRule="evenodd">
                     <g transform="matrix(1,0,0,1,-8.54145e-16,-0.249341)">
                         <g transform="matrix(0.999561,0,0,0.998643,0,0.973691)">
