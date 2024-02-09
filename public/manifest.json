@@ -1,9 +1,23 @@
 {
   "short_name": "nicolaschneider",
   "name": "Portfolio Website",
-
+  "icons": [
+    {
+      "src": "favicons/png/nicolaschneider_logo-blue_32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "favicons/png/nicolaschneider_logo-blue_180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "favicons/png/nicolaschneider_logo-blue_192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "standalone"
 }
