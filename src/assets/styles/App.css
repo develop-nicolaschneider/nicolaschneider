@@ -2,27 +2,35 @@
 
 :root {
     /* google fonts -> standard font for this website */
+    height: 100%;
+    width: 100%;
+    background: var(--gradient-background);
     color-scheme: light;
-    background: var(--color-platinum);
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
+    scroll-behavior: smooth;
 
     --color-cerulean: #016886;
     --color-midnight: #015F7A;
     --color-dark-midnight: #194855;
-    --color--light-black: #303030;
+    --color-black: #000000;
+    --color-dark-black: #1e1e1e;
+    --color-light-black: #303030;
     --color-dark-gray: #444343;
     --color-gray: #555454;
     --color-light-gray: #9E9D9D;
     --color-platinum: #E6E6E6;
     --color-light-blue: #c5fdf5;
+    --color-white: #ffffff;
 
     --background-color: var(--color-platinum);
-    --font-color: var(--color-dark-gray);
+    --font-color: var(--color-black);
     --title-color: var(--color-cerulean);
-    --gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
+    --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
+    --gradient-background: linear-gradient(to bottom right, var(--color-white), var(--color-platinum));
+
     --logo-color: var(--color-midnight);
     --logo-font-color: var(--color-midnight);
 
@@ -31,19 +39,20 @@
 
 [color-theme="dark"] {
     --background-color: var(--color-dark-gray);
-    --font-color: var(--color-platinum);
+    --font-color: var(--color-white);
     --title-color: var(--color-cerulean);
-    --gradient-background: linear-gradient(to bottom right, var(--color-dark-midnight), var(--color-midnight), var(--color-dark-gray));
+    --gradient-background2: linear-gradient(to bottom right, var(--color-dark-midnight), var(--color-midnight), var(--color-dark-gray));
+    --gradient-background: linear-gradient(to bottom right, var(--color-dark-gray), var(--color-light-black));
     --logo-color: var(--color-platinum);
     --logo-font-color: var(--color-platinum);
 
     color-scheme: dark;
-    background: var(--color-dark-gray);
+    background: var(--gradient-background);
 }
 
 [color-theme="colored"] {
-    --background-color: var(--gradient-background);
-    --font-color: var(--color-dark-gray);
+    --background-color: var(--color-midnight);
+    --font-color: var(--color-black);
     --title-color: var(--color-cerulean);
     --gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
     --logo-color: var(--color-midnight);
@@ -53,16 +62,39 @@
     background: var(--gradient-background);
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
+}
+* {
     margin: 0;
     padding: 0;
+    font: inherit;
 }
-
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
+}
+#app {
+    background: var(--gradient-background);
+}
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+.page-section {
+    padding-top: 60px;
+}
+#home {
+    height: 100vh;
+}
+#about {
+    height: 100vh;
+}
+#portfolio {
     height: 100vh;
 }
