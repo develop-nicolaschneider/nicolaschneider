@@ -1,0 +1,61 @@
+@import url('/src/assets/styles/App.css');
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 16px 0 var(--color-dark-gray);
+    animation: show-navigation 5s ease-out;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav li {
+    height: 60px;
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: inherit;
+}
+nav li:hover {
+    background: var(--color-cerulean);
+}
+nav li:first-child {
+    margin-right: auto;
+
+}
+#nav-logo {
+    height: 32px;
+    width: 32px;
+    fill: var(--font-color);
+}
+nav li.active {
+    background: var(--color-midnight);
+}
+
+@keyframes show-navigation {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
