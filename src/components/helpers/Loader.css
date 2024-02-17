@@ -1,70 +1,177 @@
 @import url('/src/assets/styles/App.css');
 
-.slogan-name-div {
-  /*ToDo*/
-  background: deeppink;
-  color: deeppink;
-  height: 100vh;
+.background-loader {
   width: 100%;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  position: relative;
+  opacity: 1;
+  text-align: center;
+  height: 110vh;
+  .logo-text-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    #logo-svg {
+      fill: var(--logo-color);
+      stroke: var(--logo-color);
+      height: 150px;
+      width: 150px;
+      stroke-width: 0;
+      stroke-dasharray: 16000;
+      fill-opacity: 0;
+      animation: logo-animation 4s ease-in;
+    }
+    .logo-text {
+      opacity: 0;
+      color: var(--logo-font-color);
+      font-size: 20px;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      animation: logo-text-animation 4s ease-in;
+    }
+  }
+  h1 {
+    position: absolute;
+    align-self: flex-end;
+    bottom: 45vh;
+    width: 100%;
+    color: var(--color-platinum);
+    font-weight: 800;
+    font-size: 2rem;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--color-platinum);
+    animation: title-opacity 5s ease-out;
+  }
+  h1:hover {
+    color: transparent;
+  }
 }
-
-.logo-div {
-  background: var(--gradient-background);
+.background-loader::before {
+  content: "";
+  background-image: url("/src/assets/images/background_middle.jpeg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  #svg-logo {
-    fill: var(--logo-color);
-    stroke: var(--logo-color);
-    height: 150px;
-    width: 150px;
-    stroke-width: 0;
-    stroke-dasharray: 16000;
-    fill-opacity: 1;
-    animation: logo-animation 4s infinite;
+  animation: background-opacity 5s ease-out;
+}
+
+@media screen and (min-width: 601px){
+  .background-loader h1 {
+    font-size: 3rem;
+    -webkit-text-stroke: 2px var(--color-platinum);
+  }
+}
+@media screen and (min-width: 751px){
+  .background-loader h1 {
+    font-size: 4rem;
+    -webkit-text-stroke: 3px var(--color-platinum);
+  }
+}
+@media screen and (min-width: 901px){
+  .background-loader h1 {
+    font-size: 5rem;
+    -webkit-text-stroke: 4px var(--color-platinum);
+  }
+}
+@media screen and (min-width: 1051px){
+  .background-loader h1 {
+    font-size: 6rem;
+    -webkit-text-stroke: 4px var(--color-platinum);
   }
 }
 
-.logo-text-div {
-  height: 30px;
-  overflow: hidden;
-  .logo-text {
-    color: var(--logo-font-color);
-    font-size: 20px;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    animation: logo-text-animation 3s alternate;
-  }
-}
-
-@keyframes logo-animation {
+@keyframes background-opacity {
   0% {
-    stroke-dashoffset: 16000;
-    fill-opacity: 0;
-    stroke-width: 20px;
+    opacity: 30%;
+  }
+  65% {
+    opacity: 30%;
   }
   100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-    stroke-width: 1px;
+    opacity: 1;
   }
 }
-@keyframes logo-text-animation {
+@keyframes title-opacity {
   0% {
+    opacity: 0;
+  }
+  60% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+@keyframes logo-animation {
+0% {
+  z-index: 99;
+  stroke-dashoffset: 16000;
+    fill-opacity: 0;
+    stroke-width: 20px;
+  }
+  50% {
+    z-index: 99;
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-width: 1px;
+  }
+  80% {
+    z-index: 99;
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-width: 1px;
+  }
+  100% {
+    z-index: 99;
+    fill-opacity: 0;
+    stroke-width: 0;
+    display: none;
+  }
+}
+@keyframes logo-text-animation {
+  0% {
+    z-index: 99;
+    opacity: 0;
+  }
+  50% {
+    z-index: 99;
+    opacity: 1;
+  }
+  80% {
+    z-index: 99;
+    opacity: 1;
+  }
+  100% {
+    z-index: 99;
+    opacity: 0;
+  }
+}
+
+/* Logo Loader -> not in use at the moment */
+@keyframes loader-animation {
+  0% {
+    rotate: 0 0 0 60deg;
+  }
+  100% {
+    rotate: 1 0 1 360deg;
+
+  }
+}
+#svg-loader {
+  filter: drop-shadow(5px 5px 2px var(--color-light-gray));
+  fill: var(--logo-color);
+  height: 150px;
+  width: 150px;
+  fill-opacity: 1;
+  animation: loader-animation 4s infinite;
 }
