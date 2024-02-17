@@ -23,7 +23,6 @@ const Footer = () => {
     * if there is a change in the system theme, the site theme will adapt to this theme
     */
     const onSystemThemeChanged = useCallback((theme) => {
-        console.log("onSystemThemeChanged: "+ theme)
         const storageTheme = localStorage.getItem("theme")
         const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches === true ? "light" : "dark"
         if (theme === null) {
@@ -93,69 +92,33 @@ const Footer = () => {
 
     return (
         <footer>
-            <div className="location-div">
-                <LocationOnOutlined/>
-                {t("locationText")}
-            </div>
-            <div className="contact-div">
-                <EmailIconOutlined/>
-                {t("email")}
-            </div>
             <div className="copyright-div">
-                {t("copyrights")}
+                <a href="./">
+                    {t("copyrights")}
+                </a>
             </div>
             <div className="social-div">
-                <InstagramIcon/>
-                <LinkedInIcon/>
-                <GitHubIcon/>
+                <a href="mailto:contact@nicolaschneider.ch" target="_blank" rel="noopener noreferrer">
+                    <EmailIconOutlined/>
+                </a>
+                <a href="http://linkedin.com/in/nicola-schneider-406966222" target="_blank" rel="noopener noreferrer">
+                    <LinkedInIcon/>
+                </a>
+                <a href="https://github.com/nicola-nicolaschneider" target="_blank" rel="noopener noreferrer">
+                    <GitHubIcon/>
+                </a>
+                <a href="https://www.instagram.com/schneider.n/" target="_blank" rel="noopener noreferrer">
+                    <InstagramIcon/>
+                </a>
             </div>
-            <div className="theme-div"
-            ></div>
-            <form className="theme-picker" action="">
-                <fieldset key="theme">
-                    <legend className="visually-hidden">{t("labelTheme")}</legend>
-                    <input
-                        type="radio"
-                        name="theme"
-                        id="light"
-                        value="light"
-                        checked={colorTheme === "light"}
-                        onChange={onThemeChange}
-                    />
-                    <label htmlFor="light" className="visually-hidden">{t("lightTheme")}</label>
-
-                    <input
-                        type="radio"
-                        id="dark"
-                        name="theme"
-                        value="dark"
-                        checked={colorTheme === "dark"}
-                        onChange={onThemeChange}
-                    />
-                    <label htmlFor="dark" className="visually-hidden">{t("darkTheme")}</label>
-
-                    <input
-                        type="radio"
-                        id="colored"
-                        name="theme"
-                        value="colored"
-                        checked={colorTheme === "colored"}
-                        onChange={onThemeChange}
-                    />
-                    <label htmlFor="colored" className="theme-label">{t("coloredTheme")}</label>
-                    <input
-                        type="radio"
-                        id="system"
-                        name="theme"
-                        value="system"
-                        checked={colorTheme === "system"}
-                        onChange={onThemeChange}
-                    />
-                    <label htmlFor="system" className="theme-label">{t("systemTheme")}</label>
-                </fieldset>
-            </form>
+            <div className="location-div">
+                <a href="https://maps.app.goo.gl/5Ygypqd769UU5ngE8" target="_blank" rel="noopener noreferrer">
+                    <LocationOnOutlined/>
+                    {t("locationText")}
+                </a>
+            </div>
             <div className="language-div">
-                <label htmlFor="langugage" className="">{t("selectLngLbl")}</label>
+                <label htmlFor="language-select" className="">{t("selectLngLbl")}</label>
                 <select
                     id="language-select"
                     name="language"
@@ -174,6 +137,57 @@ const Footer = () => {
                         </option>
                     })}
                 </select>
+            </div>
+            <div className="theme-div">
+                <form className="theme-picker" action="">
+                    <fieldset key="theme">
+                        <legend className="theme-picker-legend">{t("labelTheme")}</legend>
+                        <label htmlFor="light" className="theme-picker-label">
+                            <input
+                                type="radio"
+                                name="theme"
+                                id="light"
+                                value="light"
+                                className="theme-picker-input"
+                                checked={colorTheme === "light"}
+                                onChange={onThemeChange}
+                            />
+                            {t("lightTheme")}</label>
+                        <label htmlFor="dark" className="theme-picker-label">
+                            <input
+                                type="radio"
+                                id="dark"
+                                name="theme"
+                                value="dark"
+                                className="theme-picker-input"
+                                checked={colorTheme === "dark"}
+                                onChange={onThemeChange}
+                            />
+                            {t("darkTheme")}</label>
+                        <label htmlFor="colored" className="theme-picker-label">
+                            <input
+                                type="radio"
+                                id="colored"
+                                name="theme"
+                                value="colored"
+                                className="theme-picker-input"
+                                checked={colorTheme === "colored"}
+                                onChange={onThemeChange}
+                            />
+                            {t("coloredTheme")}</label>
+                        <label htmlFor="system" className="theme-picker-label">
+                            <input
+                                type="radio"
+                                id="system"
+                                name="theme"
+                                value="system"
+                                className="theme-picker-input"
+                                checked={colorTheme === "system"}
+                                onChange={onThemeChange}
+                            />
+                            {t("systemTheme")}</label>
+                    </fieldset>
+                </form>
             </div>
         </footer>
     )
