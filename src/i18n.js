@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { initReactI18next } from "react-i18next";
+import { initReactI18next } from "react-i18next"
 
 i18n.use(initReactI18next).init({
     debug: false,
@@ -20,12 +20,12 @@ i18n.use(initReactI18next).init({
                 locationText: "Solothurn, Switzerland",
                 email: "contact@nicolaschneider.ch",
                 copyrights: "© nicolaschneider",
-                labelTheme: "Pick a color scheme",
+                labelTheme: "Theme",
                 coloredTheme: "colored",
                 darkTheme: "dark",
                 lightTheme: "light",
                 systemTheme: "automatic",
-                selectLngLbl: "Select language"
+                selectLngLbl: "language"
             }
         },
         de: {
@@ -39,12 +39,12 @@ i18n.use(initReactI18next).init({
                 locationText: "Solothurn, Schweiz",
                 email: "contact@nicolaschneider.ch",
                 copyrights: "© nicolaschneider",
-                labelTheme: "Wähle ein Farbschema",
+                labelTheme: "Farbschema",
                 coloredTheme: "bunt",
                 darkTheme: "dunkel",
                 lightTheme: "hell",
                 systemTheme: "Automatisch",
-                selectLngLbl: "Sprache wählen"
+                selectLngLbl: "Sprache"
             }
         }
     }
