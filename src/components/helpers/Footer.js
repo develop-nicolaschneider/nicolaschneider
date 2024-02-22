@@ -8,8 +8,8 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import './Footer.css'
 
 const languages = [
-    { code: "en", native: "en" },
     { code: "de", native: "de" },
+    { code: "en", native: "en" },
 ]
 const themes = [ "light", "dark", "colored", "system"]
 
