@@ -101,10 +101,10 @@ const Footer = () => {
                 <a href="mailto:contact@nicolaschneider.ch" target="_blank" rel="noopener noreferrer">
                     <EmailIconOutlined/>
                 </a>
-                <a href="http://linkedin.com/in/nicola-schneider-406966222" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/nicola-schneider-406966222" target="_blank" rel="noopener noreferrer">
                     <LinkedInIcon/>
                 </a>
-                <a href="https://github.com/nicola-nicolaschneider" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/develop-nicolaschneider" target="_blank" rel="noopener noreferrer">
                     <GitHubIcon/>
                 </a>
                 <a href="https://www.instagram.com/schneider.n/" target="_blank" rel="noopener noreferrer">
