@@ -17,7 +17,6 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
 }
 nav li {
     height: 60px;
@@ -30,10 +29,13 @@ nav a {
     align-items: center;
     font-weight: 800;
     font-size: 1.2rem;
-    color: inherit;
+    color: var(--color-black);
 }
 nav li:hover {
     background: var(--color-cerulean);
+    #nav-logo {
+        animation: nav-logo-animation 1s ease-in-out;
+    }
 }
 nav li:first-child {
     margin-right: auto;
@@ -43,6 +45,7 @@ nav li:first-child {
     height: 32px;
     width: 32px;
     fill: var(--font-color);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 nav li.active {
     background: var(--color-midnight);
@@ -57,5 +60,13 @@ nav li.active {
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes nav-logo-animation {
+    0% {
+        rotate: 0 0 0 60deg;
+    }
+    100% {
+        rotate: 1 0 1 360deg;
     }
 }
