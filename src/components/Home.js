@@ -1,8 +1,8 @@
 import React from 'react'
-import './Loader.css'
+import '../assets/styles/Home.css'
 import {useTranslation} from "react-i18next";
 
-const SiteLoader = () => {
+const Home = () => {
     const { t} = useTranslation()
 
     return (
@@ -38,4 +38,4 @@ const SiteLoader = () => {
     )
 }
 
-export default SiteLoader
+export default Home

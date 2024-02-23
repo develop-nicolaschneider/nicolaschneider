@@ -1,0 +1,72 @@
+@import url('/src/assets/styles/App.css');
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+
+    width: 100%;
+    .about-image {
+        position: sticky;
+        bottom: 0;
+        top: 100px;
+        flex: 1;
+        height: 100%;
+        width: 450px;
+        border-radius: 30px;
+        object-fit: cover;
+        border: 1px solid #ffffff02;
+        box-shadow: 0 4px 15px 0 #ffffff40;
+    }
+    .cards {
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+.card {
+    border-radius: 30px;
+    min-width: 250px;
+    max-width: 350px;
+    height: 500px;
+    background: var(--gradient-background-opacity);
+    backdrop-filter: blur(20px);
+    border: 1px solid #ffffff02;
+    box-shadow: 0 4px 15px 0 #ffffff40;
+}
+.card-image {
+    border-radius: 30px;
+    height: 300px;
+    backdrop-filter: blur(10px);
+    img {
+        object-fit: cover;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 300ms;
+    }
+}
+.card-image:hover {
+    img {
+        transform: translateX(-50%) scale(1.1);
+
+    }
+}
+.card-description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: 200;
+        letter-spacing: 4px;
+    }
+    .card-text {
+        overflow-wrap: break-word;
+    }
+}

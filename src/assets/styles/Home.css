@@ -53,10 +53,11 @@
 }
 .background-loader::before {
   content: "";
-  background-image: url("/src/assets/images/background_middle.jpeg");
+  background-image: url("/src/assets/images/backgrounds/home_background_nicola-schneider.jpeg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
   position: absolute;
   top: 0;
   right: 0;
@@ -155,23 +156,4 @@
     z-index: 99;
     opacity: 0;
   }
-}
-
-/* Logo Loader -> not in use at the moment */
-@keyframes loader-animation {
-  0% {
-    rotate: 0 0 0 60deg;
-  }
-  100% {
-    rotate: 1 0 1 360deg;
-
-  }
-}
-#svg-loader {
-  filter: drop-shadow(5px 5px 2px var(--color-light-gray));
-  fill: var(--logo-color);
-  height: 150px;
-  width: 150px;
-  fill-opacity: 1;
-  animation: loader-animation 4s infinite;
 }

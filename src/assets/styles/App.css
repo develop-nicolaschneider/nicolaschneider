@@ -30,6 +30,7 @@
     --title-color: var(--color-cerulean);
     --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
     --gradient-background: linear-gradient(to bottom right, var(--color-white), var(--color-platinum));
+    --gradient-background-opacity: linear-gradient(to bottom right, #ffffff20, #E6E6E620);
 
     --logo-color: var(--color-midnight);
     --logo-font-color: var(--color-midnight);
@@ -86,15 +87,29 @@ img, picture, svg, video {
     display: block;
     max-width: 100%;
 }
-.page-section {
-    padding-top: 60px;
-}
 #home {
     height: 100vh;
 }
 #about {
-    height: 100vh;
+    min-height: 100vh;
 }
 #portfolio {
-    height: 100vh;
+    min-height: 100vh;
+}
+.page-section {
+    padding-top: 60px;
+}
+.section-title-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-size: 3rem;
+        font-weight: 100;
+        letter-spacing: 7px;
+    }
 }

@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
 import {Routes, Route, Navigate} from "react-router-dom"
-import SiteLoader from "./components/helpers/SiteLoader"
-import Portfolio from "./components/Portfolio"
-import About from "./components/About";
+import Home from "./components/Home"
+import About from "./components/About"
+import Portfolio from "./components/Portfolio";
 import Navigation from "./components/helpers/Navigation";
 import Footer from "./components/helpers/Footer"
 import './assets/styles/App.css'
@@ -23,22 +23,24 @@ function App() {
                 name="home"
                 id="home"
                 key="0"
-                ref={(el) => (observerRefs.current[0] = el)}>            >
-                <SiteLoader/>
+                ref={(el) => (observerRefs.current[0] = el)}>
+                <Home/>
             </section>
             <section
                 name="about"
                 id="about"
                 key="1"
-                ref={(el) => (observerRefs.current[1] = el)}                className="page-section">
+                ref={(el) => (observerRefs.current[1] = el)}
+                className="page-section">
                 <About/>
             </section>
             <section
                 name="portfolio"
                 id="portfolio"
                 key="2"
-                ref={(el) => (observerRefs.current[2] = el)}                className="page-section">
-                <Portfolio/>
+                ref={(el) => (observerRefs.current[2] = el)}
+                className="page-section">
+            <Portfolio/>
             </section>
             <Footer/>
         </>
