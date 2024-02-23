@@ -103,13 +103,13 @@
     --slider-img: url('/src/assets/images/about/moto_horizontal_nicola-schneider.jpeg') center;
 }
 #slider-2 {
-    --slider-img: url('/src/assets/images/about/picture_nicola-schneider.jpg');
+    --slider-img: url('/src/assets/images/about/picture_nicola-schneider.jpeg');
 }
 #slider-3 {
-    --slider-img: url('/src/assets/images/about/norway-havn_nicola-schneider.png');
+    --slider-img: url('/src/assets/images/about/norway-havn_nicola-schneider.jpeg');
 }
 #slider-4 {
-    --slider-img: url('/src/assets/images/about/norway-nature_nicola-schneider.png');
+    --slider-img: url('/src/assets/images/about/norway-nature_nicola-schneider.jpeg');
 }
 #slider-5 {
     --slider-img: url('/src/assets/images/about/hockey_nicola-schneider.jpeg');
