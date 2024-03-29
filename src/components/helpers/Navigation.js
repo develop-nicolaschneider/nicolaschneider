@@ -12,7 +12,7 @@ function Navigation({ observerRefs }) {
 
     const observerCallback = async (e, key) => {
         if (e.length && e[0].isIntersecting) {
-            window.location.hash = e[0].target.id;
+            window.history.replaceState(null, null, "#"+e[0].target.id)
             setVisibleKey(key)
         }
     }
