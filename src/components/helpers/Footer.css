@@ -54,6 +54,9 @@ fieldset {
 }
 fieldset legend {
     margin: auto auto 1rem auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 .theme-picker-label {
     display: flex;
