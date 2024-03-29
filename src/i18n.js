@@ -25,7 +25,16 @@ i18n.use(initReactI18next).init({
                 darkTheme: "dark",
                 lightTheme: "light",
                 systemTheme: "automatic",
-                selectLngLbl: "language"
+                selectLngLbl: "language",
+
+                // About
+                aboutTitle: "About",
+                aboutSubtitle: "Hi. I am Nicola.",
+                aboutSubtitle2: "years old.",
+                // First Slide
+                aboutMe: "About me",
+                aboutMeAge: "years old",
+                aboutMeDeveloper: ""
             }
         },
         de: {
