@@ -1,4 +1,3 @@
-import React from 'react'
 import '../assets/styles/Home.css'
 import {useTranslation} from "react-i18next";
 

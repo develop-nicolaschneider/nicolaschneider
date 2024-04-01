@@ -1,15 +1,13 @@
 import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './i18n'
 
-import { createRoot } from 'react-dom/client'
-const container = document.getElementById('app')
-const root = createRoot(container)
-root.render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <BrowserRouter>
-            <App tab="" />
+            <App/>
         </BrowserRouter>
     </React.StrictMode>
 )

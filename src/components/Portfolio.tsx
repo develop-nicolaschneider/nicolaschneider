@@ -1,4 +1,3 @@
-import HtmlIcon from '@mui/icons-material/Html';
 import path2 from '../assets/images/about/hockey_nicola-schneider.jpeg'
 import path3 from '../assets/images/about/ehck_logo.png'
 import path4 from '../assets/images/about/ehck_logo.png'
@@ -8,7 +7,7 @@ import Card from "./helpers/Card"
 
 const aboutCards = [
     {
-        cardImgPath: <HtmlIcon/>,
+        cardImgPath: path2,
         hasLink: "https://www.ehcburgdorf.ch",
         cardTitle: "Test1",
         cardText: "adflj"
@@ -43,7 +42,7 @@ const Portfolio = () => {
                 <div className="cards">
                     {aboutCards.map((card, key) => {
                         return (
-                            <Card key={key} /*cardImgPath={card.cardImgPath}*/ hasLink={card.hasLink} cardTitle={card.cardTitle}
+                            <Card key={key} cardImgPath={card.cardImgPath} hasLink={card.hasLink} cardTitle={card.cardTitle}
                                   cardText={card.cardText}/>
                         )
                     })}

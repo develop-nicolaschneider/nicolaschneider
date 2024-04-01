@@ -1,15 +1,22 @@
 import '../../assets/styles/Portfolio.css'
 
-function Card(props) {
+type CardProps = {
+    cardImgPath: string,
+    hasLink: string,
+    cardTitle: string,
+    cardText: string
+}
+
+function Card({cardImgPath, hasLink, cardTitle, cardText}: CardProps) {
     const imgDiv2 =
         <div className="card-image">
             {/*<img src={props.cardImgPath} alt="card" className="card-image"/>*/}
-            {props.cardImgPath}
+            {cardImgPath}
         </div>
     let imgDiv
-    if (props.hasLink !== "") {
+    if (hasLink !== "") {
         imgDiv =
-            <a href={props.hasLink} target="_blank" rel="noopener noreferrer">
+            <a href={hasLink} target="_blank" rel="noopener noreferrer">
                 {imgDiv2}
             </a>
     } else {
@@ -21,10 +28,10 @@ function Card(props) {
             {imgDiv}
             <div className="card-description">
                 <div className="card-title">
-                    {props.cardTitle}
+                    {cardTitle}
                 </div>
                 <div className="card-text">
-                    {props.cardText}
+                    {cardText}
                 </div>
             </div>
         </div>

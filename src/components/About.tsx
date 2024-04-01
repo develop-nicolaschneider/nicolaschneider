@@ -40,18 +40,22 @@ const aboutSlides = [
 const About = () => {
     const { t} = useTranslation()
     const my_age = new Date(2000, 10, 5)
-    const age = Math.abs(new Date(Date.now() - my_age).getUTCFullYear() - 1970)
+    const age = Math.abs(new Date(Date.now() - my_age.getDate()).getUTCFullYear() - 1970)
     const sliderRef = useRef(null)
 
     const onPrevBtnClicked = () => {
-        const slider = sliderRef.current
-        let slides = document.querySelectorAll('.slides')
-        slider.prepend(slides[slides.length - 1])
+        if (sliderRef.current) {
+            const slider: NodeListOf<Element> = sliderRef.current
+            let slides = document.querySelectorAll('.slides')
+            slider[0].prepend(slides[slides.length - 1])
+        }
     }
     const onNextBtnClicked = () => {
-        const slider = sliderRef.current
-        let slides = document.querySelectorAll('.slides')
-        slider.appendChild(slides[0])
+        if (sliderRef.current) {
+            const slider: NodeListOf<Element> = sliderRef.current
+            let slides = document.querySelectorAll('.slides')
+            slider[0].appendChild(slides[0])
+        }
     }
 
     return (

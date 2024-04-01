@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next"
 import LocationOnOutlined from '@mui/icons-material/LocationOnOutlined'
 import EmailIconOutlined from '@mui/icons-material/EmailOutlined'
@@ -15,17 +15,18 @@ const themes = [ "light", "dark", "colored", "system"]
 
 const Footer = () => {
     const [ colorTheme, setColorTheme ] = useState(localStorage.getItem("theme"))
-    const [ language , setLanguage ] = useState(localStorage.getItem("language"))
+    const [ language , setLanguage ] = useState(localStorage.getItem("language") || "de")
     const { t, i18n } = useTranslation()
 
     /*
     * onSystemThemeChanged changes also the page theme if there is no theme set manually for this site.
     * if there is a change in the system theme, the site theme will adapt to this theme
     */
-    const onSystemThemeChanged = useCallback((theme) => {
-        const storageTheme = localStorage.getItem("theme")
-        const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches === true ? "light" : "dark"
-        if (theme === null) {
+    const onSystemThemeChanged = useCallback((theme: string) => {
+        let storageTheme = localStorage.getItem("theme")
+        if (storageTheme == null) storageTheme = ""
+        const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
+        if (theme === "") {
             if (!themes.includes(storageTheme) || storageTheme === "system") {
                 localStorage.setItem("theme", "system")
                 setColorTheme("system")
@@ -51,16 +52,16 @@ const Footer = () => {
     /*
      * If there is a theme change by selecting another radio button, this message is called.
      */
-    const onThemeChange = e => {
+    const onThemeChange = (e: { target: { value: string } }) => {
         onSystemThemeChanged(e.target.value)
     }
 
-    const changeCurrentLanguage = useCallback(lang => {
+    const changeCurrentLanguage = useCallback((lang: string) => {
         localStorage.setItem("language", lang)
         setLanguage(lang)
         i18n.changeLanguage(lang).then(() => null)
     }, [ i18n ])
-    const onLanguageChange = (e) => {
+    const onLanguageChange = (e: { target: { childNodes: { [x: string]: any }; selectedIndex: string | number } }) => {
         const selected = e.target.childNodes[e.target.selectedIndex]
         const lang = selected.getAttribute('id')
         changeCurrentLanguage(lang)
@@ -72,7 +73,7 @@ const Footer = () => {
             const defaultLanguage = languages[0].code
             changeCurrentLanguage(defaultLanguage)
         } else {
-            const currentLanguage = languages.find(obj => obj.code === storageLanguage).code
+            const currentLanguage: string = languages.find(obj => obj.code === storageLanguage)?.code || ""
             changeCurrentLanguage(currentLanguage)
         }
     }, [ changeCurrentLanguage ])
@@ -81,8 +82,8 @@ const Footer = () => {
     * Check if system theme (light / dark theme) or language changed
     */
     useEffect(() => {
-        window.matchMedia("(prefers-color-scheme: light)").addEventListener('change', () => onSystemThemeChanged(null))
-        onSystemThemeChanged(null)
+        window.matchMedia("(prefers-color-scheme: light)").addEventListener('change', () => onSystemThemeChanged(""))
+        onSystemThemeChanged("")
         setDefaultLanguage()
         return () => {
             window.matchMedia('(prefers-color-scheme: light)').removeEventListener('change', () => {
@@ -120,17 +121,16 @@ const Footer = () => {
             <div className="language-div">
                 <label htmlFor="language-select" className="">{t("selectLngLbl")}</label>
                 <select
+                    value={language}
                     id="language-select"
                     name="language"
                     onChange={onLanguageChange}
-                    defaultValue={language}
                 >
                     {languages.map((lang) => {
                         const {code, native} = lang;
                         return <option
                             id={code}
                             key={code}
-                            name={code}
                             value={code}
                         >
                             {t(native)}

@@ -3,12 +3,31 @@ import { initReactI18next } from "react-i18next"
 
 i18n.use(initReactI18next).init({
     debug: false,
-    fallbackLng: 'en',
+    fallbackLng: 'de',
     interpolation: {
         escapeValue: false, // not needed for react as it escapes by default
     },
     // language resources
     resources: {
+        de: {
+            translation: {
+                en: "Englisch",
+                de: "Deutsch",
+                logoText: "nicola schneider",
+                pageTitle: "Explore more...",
+
+                // footer
+                locationText: "Solothurn, Schweiz",
+                email: "contact@nicolaschneider.ch",
+                copyrights: "© nicolaschneider",
+                labelTheme: "Farbschema",
+                coloredTheme: "bunt",
+                darkTheme: "dunkel",
+                lightTheme: "hell",
+                systemTheme: "Automatisch",
+                selectLngLbl: "Sprache"
+            }
+        },
         en: {
             translation: {
                 en: "English",
@@ -35,25 +54,6 @@ i18n.use(initReactI18next).init({
                 aboutMe: "About me",
                 aboutMeAge: "years old",
                 aboutMeDeveloper: ""
-            }
-        },
-        de: {
-            translation: {
-                en: "Englisch",
-                de: "Deutsch",
-                logoText: "nicola schneider",
-                pageTitle: "Explore more...",
-
-                // footer
-                locationText: "Solothurn, Schweiz",
-                email: "contact@nicolaschneider.ch",
-                copyrights: "© nicolaschneider",
-                labelTheme: "Farbschema",
-                coloredTheme: "bunt",
-                darkTheme: "dunkel",
-                lightTheme: "hell",
-                systemTheme: "Automatisch",
-                selectLngLbl: "Sprache"
             }
         }
     }
