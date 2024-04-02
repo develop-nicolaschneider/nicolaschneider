@@ -57,4 +57,4 @@ i18n.use(initReactI18next).init({
             }
         }
     }
-})
+}).then(null)

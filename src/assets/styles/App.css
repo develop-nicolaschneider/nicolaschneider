@@ -80,7 +80,7 @@ body {
     font-weight: 100;
     font-style: normal;
 }
-#app {
+#root {
     background: var(--gradient-background);
 }
 img, picture, svg, video {
