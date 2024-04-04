@@ -1,46 +1,41 @@
-import navLogo from '/src/assets/logo/nicolaschneider_logo.svg'
+import navLogo from '../../assets/logo/nicolaschneider_logo.svg'
 import './Navigation.css'
+import { useTranslation } from "react-i18next"
 
 type NavigationProps = {
     visibleKey: string,
-    setVisibleKey: any
 }
 
-const Navigation = ({visibleKey, setVisibleKey}: NavigationProps) => {
-    // const [visibleKey, setVisibleKey] = useState(0)
-    // const observers = useRef<IntersectionObserver | null>(null)
-    //
-    const onItemClicked = (key: string) => {
-        setVisibleKey(key)
-    }
+const Navigation = ({visibleKey}: NavigationProps) => {
+    const { t} = useTranslation()
+
 
     return (
         <header>
             <nav id="navigation">
                 <ul>
                     <li
-                        id="home-0"
-                        key="0"
-                        onClick={() => onItemClicked("home")}
+                        id="nav-home"
+                        key={0}
                         className={`${"home" === visibleKey ? "active" : ""}`}
                     >
-                        <a id="nav-logo" href="/#home"><img id="nav-logo" src={navLogo} alt="logo"/></a>
+                        <a id="nav-logo" href="/#home">
+                            <img id="nav-svg-logo" src={navLogo} alt={"logo"}/>
+                        </a>
                     </li>
                     <li
-                        id="about-1"
-                        key="1"
-                        onClick={() => onItemClicked("about")}
+                        id="nav-about"
+                        key={1}
                         className={`${"about" === visibleKey ? "active" : ""}`}
                     >
-                        <a href="/#about">About</a>
+                        <a href="/#about">{t("navAbout")}</a>
                     </li>
                     <li
-                        id="portfolio-2"
-                        key="2"
-                        onClick={() => onItemClicked("portfolio")}
+                        id="nav-portfolio"
+                        key={2}
                         className={`${"portfolio" === visibleKey ? "active" : ""}`}
                     >
-                        <a href="/#portfolio">Portfolio</a>
+                        <a href="/#portfolio">{t("navPortfolio")}</a>
                     </li>
                 </ul>
             </nav>

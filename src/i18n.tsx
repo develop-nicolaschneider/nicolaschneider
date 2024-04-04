@@ -11,6 +11,10 @@ i18n.use(initReactI18next).init({
     resources: {
         de: {
             translation: {
+                // navigation
+                navAbout: "Über",
+                navPortfolio: "Portfolio",
+
                 en: "Englisch",
                 de: "Deutsch",
                 logoText: "nicola schneider",
@@ -19,17 +23,29 @@ i18n.use(initReactI18next).init({
                 // footer
                 locationText: "Solothurn, Schweiz",
                 email: "contact@nicolaschneider.ch",
-                copyrights: "© nicolaschneider",
                 labelTheme: "Farbschema",
                 coloredTheme: "bunt",
                 darkTheme: "dunkel",
                 lightTheme: "hell",
                 systemTheme: "Automatisch",
-                selectLngLbl: "Sprache"
+                selectLngLbl: "Sprache",
+
+                // About
+                aboutTitle: "Über",
+                aboutSubtitle: "Hi. Ich bin Nicola.",
+                aboutSubtitle2: "Jahre alt.",
+                // First Slide
+                aboutMe: "Über mich",
+                aboutMeAge: "years old",
+                aboutMeDeveloper: ""
             }
         },
         en: {
             translation: {
+                // navigation
+                navAbout: "About",
+                navPortfolio: "Portfolio",
+
                 en: "English",
                 de: "German",
                 logoText: "nicola schneider",
@@ -38,7 +54,6 @@ i18n.use(initReactI18next).init({
                 // footer
                 locationText: "Solothurn, Switzerland",
                 email: "contact@nicolaschneider.ch",
-                copyrights: "© nicolaschneider",
                 labelTheme: "Theme",
                 coloredTheme: "colored",
                 darkTheme: "dark",

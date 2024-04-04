@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next"
 import LocationOnOutlined from '@mui/icons-material/LocationOnOutlined'
 import EmailIconOutlined from '@mui/icons-material/EmailOutlined'
@@ -47,7 +47,7 @@ const Footer = () => {
                 document.documentElement.setAttribute("color-theme", theme)
             }
         }
-    }, [  ]);
+    }, [  ])
 
     /*
      * If there is a theme change by selecting another radio button, this message is called.
@@ -61,10 +61,10 @@ const Footer = () => {
         setLanguage(lang)
         i18n.changeLanguage(lang).then(() => null)
     }, [ i18n ])
-    const onLanguageChange = (e: { target: { childNodes: { [x: string]: any }; selectedIndex: string | number } }) => {
-        const selected = e.target.childNodes[e.target.selectedIndex]
+    const onLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const selected = e.target.children[e.target.selectedIndex]
         const lang = selected.getAttribute('id')
-        changeCurrentLanguage(lang)
+        if (lang) changeCurrentLanguage(lang)
     }
 
     const setDefaultLanguage = useCallback(()  => {
@@ -95,7 +95,7 @@ const Footer = () => {
         <footer>
             <div className="copyright-div">
                 <a href="./">
-                    {t("copyrights")}
+                    © {new Date(Date.now()).getUTCFullYear()} nicolaschneider
                 </a>
             </div>
             <div className="social-div">
@@ -127,7 +127,7 @@ const Footer = () => {
                     onChange={onLanguageChange}
                 >
                     {languages.map((lang) => {
-                        const {code, native} = lang;
+                        const {code, native} = lang
                         return <option
                             id={code}
                             key={code}

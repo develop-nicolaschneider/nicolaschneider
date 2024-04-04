@@ -32,20 +32,27 @@ nav a {
     color: var(--color-black);
 }
 nav li:hover {
-    background: var(--color-cerulean);
+    border-bottom: 6px solid var(--color-cerulean);
+    padding-top: 6px;
     #nav-logo {
         animation: nav-logo-animation 1s ease-in-out;
     }
+}
+nav li:first-child:hover {
+    padding-top: 0;
 }
 nav li:first-child {
     margin-right: auto;
 
 }
 #nav-logo {
-    height: 32px;
-    width: 32px;
+    height: 60px;
     fill: var(--font-color);
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    #nav-svg-logo {
+        height: 36px;
+        width: 36px;
+    }
 }
 nav li.active {
     background: var(--color-midnight);

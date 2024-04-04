@@ -1,5 +1,5 @@
 import '../assets/styles/Home.css'
-import {useTranslation} from "react-i18next";
+import {useTranslation} from "react-i18next"
 
 const Home = () => {
     const { t} = useTranslation()

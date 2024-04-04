@@ -1,8 +1,8 @@
-import { useRef } from "react";
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { useRef } from "react"
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore'
+import NavigateNextIcon from '@mui/icons-material/NavigateNext'
 import '../assets/styles/About.css'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next"
 
 const aboutSlides = [
     {
@@ -40,21 +40,21 @@ const aboutSlides = [
 const About = () => {
     const { t} = useTranslation()
     const my_age = new Date(2000, 10, 5)
-    const age = Math.abs(new Date(Date.now() - my_age.getDate()).getUTCFullYear() - 1970)
-    const sliderRef = useRef(null)
+    const age = Math.abs(new Date(Date.now() - my_age.getTime()).getUTCFullYear() - 1970)
+    const sliderRef = useRef<HTMLDivElement>(null)
 
     const onPrevBtnClicked = () => {
         if (sliderRef.current) {
-            const slider: NodeListOf<Element> = sliderRef.current
-            let slides = document.querySelectorAll('.slides')
-            slider[0].prepend(slides[slides.length - 1])
+            const slider = sliderRef.current
+            const slides = document.querySelectorAll('.slides')
+            slider.prepend(slides[slides.length - 1])
         }
     }
     const onNextBtnClicked = () => {
         if (sliderRef.current) {
-            const slider: NodeListOf<Element> = sliderRef.current
-            let slides = document.querySelectorAll('.slides')
-            slider[0].appendChild(slides[0])
+            const slider = sliderRef.current
+            const slides = document.querySelectorAll('.slides')
+            slider.appendChild(slides[0])
         }
     }
 
