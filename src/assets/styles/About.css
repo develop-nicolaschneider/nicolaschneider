@@ -27,7 +27,6 @@
 .slider {
     position: absolute;
     inset: 60px 280px 60px 40px;
-    background: #ccc;
     border-radius: 30px;
 }
 .slider .slides {
@@ -46,23 +45,23 @@
     align-items: flex-end;
 }
 .slide-content {
+    white-space: pre-line;
     position: relative;
-    padding: 10px;
-    max-width: 600px;
-    transition: 0.25s;
-    transition-delay: 0s;
+    padding: 15px;
+    width: 100%;
+    transition: 1s;
     transform: translateY(10px);
     opacity: 0;
-    background: #cccccc10;
+    background: var(--color-gray-transparent);
     backdrop-filter: blur(20px);
-    border-radius: 0 30px;
+    border-radius: 30px;
     h2 {
         font-size: 3rem;
         font-weight: 300;
-        color: var(--font-color);
+        color: var(--color-white);
     }
     p {
-        color: var(--font-color);
+        color: var(--color-white);
     }
 }
 .slider .slides:nth-child(1),
@@ -80,7 +79,7 @@
 .slider .slides:nth-child(2) .slide-content {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.5s;
+    transition-delay: 1s;
 }
 .slider .slides:nth-child(3) {
     left: calc(60% + 240px);
@@ -113,6 +112,14 @@
 }
 #slider-5 {
     --slider-img: url('/src/assets/images/about/hockey_nicola-schneider.jpeg');
+    .slide-content {
+        h2 {
+            color: var(--color-black);
+        }
+        p {
+            color: var(--color-black);
+        }
+    }
 }
 #slider-6 {
     --slider-img: url('/src/assets/images/about/ehck_logo.png') center, var(--background-color) center;
@@ -126,7 +133,7 @@
     .slide-button {
         margin: 0 5%;
         cursor: pointer;
-        background: #cccccc10;
+        background: var(--color-gray-transparent);
         border-radius: 30px;
         width: 40%;
         height: 30px;
@@ -139,7 +146,7 @@
 }
 .slide-button:hover {
     transition: 250ms;
-    background: #cccccc70;
+    background: var(--color-gray);
 }
 
 @media (max-width: 900px) {
@@ -178,6 +185,7 @@
         padding: 0 40px;
     }
     .slide-content {
+        width: 100%;
         h2 {
             font-size: 2rem;
         }

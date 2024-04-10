@@ -4,7 +4,7 @@
   width: 100%;
   opacity: 1;
   text-align: center;
-  height: 110vh;
+  height: 100vh;
   .logo-text-div {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
       stroke-width: 0;
       stroke-dasharray: 16000;
       fill-opacity: 0;
-      animation: logo-animation 4s ease-in;
+      animation: logo-animation 5s ease-in;
     }
     .logo-text {
       opacity: 0;
@@ -32,7 +32,7 @@
       font-size: 20px;
       font-weight: bolder;
       letter-spacing: 2px;
-      animation: logo-text-animation 4s ease-in;
+      animation: logo-text-animation 5s ease-in;
     }
   }
   h1 {
@@ -95,7 +95,7 @@
   0% {
     opacity: 30%;
   }
-  65% {
+  75% {
     opacity: 30%;
   }
   100% {
@@ -106,7 +106,7 @@
   0% {
     opacity: 0;
   }
-  60% {
+  75% {
     opacity: 0;
   }
   100% {
@@ -120,19 +120,19 @@
     fill-opacity: 0;
     stroke-width: 20px;
   }
-  50% {
+  40% {
     z-index: 99;
     stroke-dashoffset: 0;
     fill-opacity: 1;
     stroke-width: 1px;
   }
-  80% {
+  65% {
     z-index: 99;
     stroke-dashoffset: 0;
     fill-opacity: 1;
     stroke-width: 1px;
   }
-  100% {
+  75% {
     z-index: 99;
     fill-opacity: 0;
     stroke-width: 0;
@@ -144,15 +144,15 @@
     z-index: 99;
     opacity: 0;
   }
-  50% {
+  40% {
     z-index: 99;
     opacity: 1;
   }
-  80% {
+  65% {
     z-index: 99;
     opacity: 1;
   }
-  100% {
+  75% {
     z-index: 99;
     opacity: 0;
   }

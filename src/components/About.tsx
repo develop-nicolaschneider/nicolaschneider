@@ -7,33 +7,33 @@ import { useTranslation } from "react-i18next"
 const aboutSlides = [
     {
         slideId: "slider-1",
-        slideTitle: "Motorrad",
-        slideText: "",
+        slideTitle: "aboutMotorcycleTitle",
+        slideText: "aboutMotorcycleContent",
     },
     {
         slideId: "slider-2",
-        slideTitle: "About me",
-        slideText: "",
+        slideTitle: "aboutMeTitle",
+        slideText: "aboutMeContent",
     },
     {
         slideId: "slider-3",
-        slideTitle: "Travel",
-        slideText: "",
+        slideTitle: "aboutTravelTitle",
+        slideText: "aboutTravelContent",
     },
     {
         slideId: "slider-4",
-        slideTitle: "Photography",
-        slideText: "",
+        slideTitle: "aboutPhotographyTitle",
+        slideText: "aboutPhotographyContent",
     },
     {
         slideId: "slider-5",
-        slideTitle: "Hockey",
-        slideText: "",
+        slideTitle: "aboutHockeyTitle",
+        slideText: "aboutHockeyContent",
     },
     {
         slideId: "slider-6",
-        slideTitle: "EHC Koppigen",
-        slideText: "",
+        slideTitle: "aboutEhcKoppigenTitle",
+        slideText: "aboutEhcKoppigenContent",
     }
 ]
 
@@ -68,8 +68,8 @@ const About = () => {
                         return (
                             <div id={slide.slideId} className="slides" key={key}>
                                 <div className="slide-content">
-                                    <h2>{slide.slideTitle}</h2>
-                                    <p>{slide.slideText}</p>
+                                    <h2>{t(slide.slideTitle)}</h2>
+                                    <p>{t(slide.slideText)}</p>
                                 </div>
                             </div>
                         )

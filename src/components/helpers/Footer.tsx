@@ -8,8 +8,8 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import './Footer.css'
 
 const languages = [
-    { code: "de", native: "de" },
     { code: "en", native: "en" },
+    { code: "de", native: "de" },
 ]
 const themes = [ "light", "dark", "colored", "system"]
 
@@ -63,19 +63,21 @@ const Footer = () => {
     }, [ i18n ])
     const onLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const selected = e.target.children[e.target.selectedIndex]
-        const lang = selected.getAttribute('id')
+        const lang = selected.id
         if (lang) changeCurrentLanguage(lang)
     }
 
     const setDefaultLanguage = useCallback(()  => {
-        const storageLanguage = localStorage.getItem("language")
-        if (storageLanguage === null) {
-            const defaultLanguage = languages[0].code
-            changeCurrentLanguage(defaultLanguage)
+        let language = localStorage.getItem("language") || ""
+        if (language === "") {
+            // Browser language
+            const navigatorLanguage = navigator.language
+            language = languages.find(obj => obj.code === navigatorLanguage.substring(0,2))?.code || languages[0].code
         } else {
-            const currentLanguage: string = languages.find(obj => obj.code === storageLanguage)?.code || ""
-            changeCurrentLanguage(currentLanguage)
+            // Check language in localstorage, else set default language
+            language = languages.find(obj => obj.code === language)?.code || languages[0].code
         }
+        changeCurrentLanguage(language)
     }, [ changeCurrentLanguage ])
 
     /*

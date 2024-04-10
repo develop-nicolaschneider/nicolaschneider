@@ -16,18 +16,16 @@ const App = () => {
         }
     },[sectionsRef])
     useEffect(() => {
-        const observerConfig = { root: null, rootMargin: '0%', threshold: 0.4 }
+        const observerConfig = { root: null, rootMargin: '0%', threshold: 0.1 }
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    console.log(entry.target.getAttribute("id"))
                     window.history.replaceState(null, "", "#"+entry.target.id)
                     setVisibleKey(entry.target.id)
                 }
             })
         }, observerConfig)
         sectionsRef.current.forEach((section: HTMLSelectElement) => {
-            console.log("observe")
             observer.observe(section)
         })
         return () => observer.disconnect()
