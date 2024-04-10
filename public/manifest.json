@@ -3,17 +3,17 @@
   "name": "Portfolio Website",
   "icons": [
     {
-      "src": "favicons/png/nicolaschneider_logo-blue_32x32.png",
+      "src": "/favicons/png/nicolaschneider_logo-blue_32x32.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "favicons/png/nicolaschneider_logo-blue_180x180.png",
+      "src": "/favicons/png/nicolaschneider_logo-blue_180x180.png",
       "type": "image/png",
       "sizes": "180x180"
     },
     {
-      "src": "favicons/png/nicolaschneider_logo-blue_192x192.png",
+      "src": "/favicons/png/nicolaschneider_logo-blue_192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     }

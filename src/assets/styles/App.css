@@ -1,17 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-    /* google fonts -> standard font for this website */
-    height: 100%;
-    width: 100%;
-    background: var(--gradient-background);
-    color-scheme: light;
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    scroll-behavior: smooth;
-
+    /* colors */
     --color-cerulean: #016886;
     --color-midnight: #015F7A;
     --color-dark-midnight: #194855;
@@ -20,44 +10,70 @@
     --color-light-black: #303030;
     --color-dark-gray: #444343;
     --color-gray: #555454;
+    --color-gray-transparent: #55545430;
     --color-light-gray: #9E9D9D;
     --color-platinum: #E6E6E6;
     --color-light-blue: #c5fdf5;
     --color-white: #ffffff;
 
+    /* color vars */
     --background-color: var(--color-platinum);
     --font-color: var(--color-black);
     --title-color: var(--color-cerulean);
     --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
     --gradient-background: linear-gradient(to bottom right, var(--color-white), var(--color-platinum));
     --gradient-background-opacity: linear-gradient(to bottom right, #ffffff20, #E6E6E620);
-
     --logo-color: var(--color-midnight);
     --logo-font-color: var(--color-midnight);
+    --radio-color: var(--color-light-gray);
+    --text-hover-color: var(--color-midnight);
 
-    --radio-color: var(--color-light-gray)
+    /* page styles */
+    --nav-height: 60px;
+    --footer-div-height: 20rem;
+
+    /* google fonts -> standard font for this website */
+    color-scheme: light;
+    height: 100%;
+    width: 100%;
+    background: var(--gradient-background);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    scroll-behavior: smooth;
 }
 
+/* dark-theme-colors*/
 [color-theme="dark"] {
     --background-color: var(--color-dark-gray);
     --font-color: var(--color-white);
     --title-color: var(--color-cerulean);
-    --gradient-background2: linear-gradient(to bottom right, var(--color-dark-midnight), var(--color-midnight), var(--color-dark-gray));
+    --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
     --gradient-background: linear-gradient(to bottom right, var(--color-dark-gray), var(--color-light-black));
+    --gradient-background-opacity: linear-gradient(to bottom right, #ffffff20, #E6E6E620);
     --logo-color: var(--color-platinum);
     --logo-font-color: var(--color-platinum);
+    --radio-color: var(--color-light-gray);
+    --text-hover-color: var(--color-cerulean);
 
     color-scheme: dark;
     background: var(--gradient-background);
 }
 
+/* colored-theme-colors*/
 [color-theme="colored"] {
     --background-color: var(--color-midnight);
     --font-color: var(--color-black);
     --title-color: var(--color-cerulean);
+    --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
     --gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
-    --logo-color: var(--color-midnight);
-    --logo-font-color: var(--color-midnight);
+    --gradient-background-opacity: linear-gradient(to bottom right, #ffffff20, #E6E6E620);
+    --logo-color: var(--color-platinum);
+    --logo-font-color: var(--color-platinum);
+    --radio-color: var(--color-light-gray);
+    --text-hover-color: var(--color-midnight);
+
 
     color-scheme: light;
     background: var(--gradient-background);
@@ -80,7 +96,7 @@ body {
     font-weight: 100;
     font-style: normal;
 }
-#app {
+#root {
     background: var(--gradient-background);
 }
 img, picture, svg, video {
@@ -97,7 +113,7 @@ img, picture, svg, video {
     min-height: 100vh;
 }
 .page-section {
-    padding-top: 60px;
+    padding-top: var(--nav-height);
 }
 .section-title-div {
     display: flex;

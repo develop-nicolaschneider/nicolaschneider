@@ -24,26 +24,26 @@ footer div {
         text-decoration: none;
     }
     a:hover {
-        color: var(--color-midnight);
+        color: var(--text-hover-color);
     }
 }
 .copyright-div {
-    min-width: 20rem;
+    min-width: var(--footer-div-height);
 }
 .location-div {
-    min-width: 20rem;
+    min-width: var(--footer-div-height);
 }
 .social-div {
-    min-width: 20rem;
+    min-width: var(--footer-div-height);
 }
 .language-div {
-    min-width: 20rem;
+    min-width: var(--footer-div-height);
     #language-select {
         min-width: 6rem;
     }
 }
 .theme-div {
-    min-width: 20rem;
+    min-width: var(--footer-div-height);
 }
 fieldset {
     justify-content: center;
@@ -54,6 +54,9 @@ fieldset {
 }
 fieldset legend {
     margin: auto auto 1rem auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 .theme-picker-label {
     display: flex;
