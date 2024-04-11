@@ -53,7 +53,7 @@
 }
 .background-loader::before {
   content: "";
-  background-image: url("/src/assets/images/backgrounds/home_background_nicola-schneider.jpeg");
+  background-image: url("/src/assets/images/home/home_background_nicola-schneider.jpeg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;

@@ -31,11 +31,11 @@ const Navigation = ({visibleKey}: NavigationProps) => {
                         <a href="/#about">{t("navAbout")}</a>
                     </li>
                     <li
-                        id="nav-portfolio"
+                        id="nav-career"
                         key={2}
-                        className={`${"portfolio" === visibleKey ? "active" : ""}`}
+                        className={`${"career" === visibleKey ? "active" : ""}`}
                     >
-                        <a href="/#portfolio">{t("navPortfolio")}</a>
+                        <a href="/#Career">{t("navCareer")}</a>
                     </li>
                 </ul>
             </nav>

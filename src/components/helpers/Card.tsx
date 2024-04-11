@@ -1,4 +1,4 @@
-import '../../assets/styles/Portfolio.css'
+import '../../assets/styles/Career.css'
 
 type CardProps = {
     cardImgPath: string,

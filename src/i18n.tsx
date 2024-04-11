@@ -13,7 +13,7 @@ i18n.use(initReactI18next).init({
             translation: {
                 // navigation
                 navAbout: "About",
-                navPortfolio: "Portfolio",
+                navCareer: "Career",
 
                 en: "English",
                 de: "German",
@@ -57,13 +57,16 @@ i18n.use(initReactI18next).init({
                 aboutMotorcycleTitle: "Motorcycle",
                 aboutMotorcycleContent: "When winter is over, I am back on the streets.\n" +
                     "Love to ride my KTM motorcycle.",
+
+                // Career
+                careerTitle: "Career",
             }
         },
         de: {
             translation: {
                 // navigation
                 navAbout: "Über",
-                navPortfolio: "Portfolio",
+                navCareer: "Karriere",
 
                 en: "Englisch",
                 de: "Deutsch",
@@ -106,6 +109,9 @@ i18n.use(initReactI18next).init({
                 aboutMotorcycleTitle: "Motorrad",
                 aboutMotorcycleContent: "Ist der Winter vorbei, bin ich zurück auf der Strasse.\n" +
                     "Ich liebe es mein KTM Motorrad zu fahren.",
+
+                // Career
+                careerTitle: "Karriere",
             }
         }
     }

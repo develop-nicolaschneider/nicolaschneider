@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom"
 import Home from "./components/Home"
 import About from "./components/About"
-import Portfolio from "./components/Portfolio"
+import Career from "./components/Career.tsx"
 import Navigation from "./components/helpers/Navigation"
 import Footer from "./components/helpers/Footer"
 import './assets/styles/App.css'
@@ -38,7 +38,7 @@ const App = () => {
                 <Route path='*' element={<Navigate to='/#home'/>}/>
                 <Route path="#home"/>
                 <Route path="#about"/>
-                <Route path="#portfolio"/>
+                <Route path="#career"/>
             </Routes>
             <section
                 id="home"
@@ -55,11 +55,11 @@ const App = () => {
                 <About/>
             </section>
             <section
-                id="portfolio"
+                id="career"
                 ref={refCallback}
                 key={2}
                 className="page-section">
-                <Portfolio/>
+                <Career/>
             </section>
             <Footer/>
         </>

@@ -1,9 +1,10 @@
 import path2 from '../assets/images/about/hockey_nicola-schneider.jpeg'
 import path3 from '../assets/images/about/ehck_logo.png'
 import path4 from '../assets/images/about/ehck_logo.png'
-import leftImage from '../assets/images/portfolio/nicola-schneider.jpeg'
-import '../assets/styles/Portfolio.css'
+import leftImage from '../assets/images/career/nicola-schneider.jpeg'
+import '../assets/styles/Career.css'
 import Card from "./helpers/Card"
+import {useTranslation} from "react-i18next";
 
 const aboutCards = [
     {
@@ -32,13 +33,14 @@ const aboutCards = [
     }
 ]
 
-const Portfolio = () => {
+const Career = () => {
+    const { t} = useTranslation()
 
     return (
         <div className="section-title-div">
-            <h1>Portfolio</h1>
+            <h1>{t("careerTitle")}</h1>
             <div className="cards-container">
-                <img src={leftImage} alt="portfolio" className="about-image"/>
+                <img src={leftImage} alt="career" className="about-image"/>
                 <div className="cards">
                     {aboutCards.map((card, key) => {
                         return (
@@ -52,4 +54,4 @@ const Portfolio = () => {
     )
 }
 
-export default Portfolio
+export default Career
