@@ -79,7 +79,7 @@
 .slider .slides:nth-child(2) .slide-content {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 1s;
+    transition-delay: 0.75s;
 }
 .slider .slides:nth-child(3) {
     left: calc(60% + 240px);
@@ -123,6 +123,7 @@
 }
 #slider-6 {
     --slider-img: url('/src/assets/images/about/ehck_logo.png') center, var(--background-color) center;
+    background-size: contain;
 }
 .slider-buttons-div {
     padding: 0 280px 0 40px;
