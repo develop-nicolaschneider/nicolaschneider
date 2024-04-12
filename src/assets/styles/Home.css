@@ -1,159 +1,267 @@
 @import url('/src/assets/styles/App.css');
 
 .background-loader {
-  width: 100%;
-  opacity: 1;
-  text-align: center;
-  height: 100vh;
-  .logo-text-div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    #logo-svg {
-      fill: var(--logo-color);
-      stroke: var(--logo-color);
-      height: 150px;
-      width: 150px;
-      stroke-width: 0;
-      stroke-dasharray: 16000;
-      fill-opacity: 0;
-      animation: logo-animation 5s ease-in;
-    }
-    .logo-text {
-      opacity: 0;
-      color: var(--logo-font-color);
-      font-size: 20px;
-      font-weight: bolder;
-      letter-spacing: 2px;
-      animation: logo-text-animation 5s ease-in;
-    }
-  }
-  h1 {
-    position: absolute;
-    align-self: flex-end;
-    bottom: 45vh;
     width: 100%;
-    color: var(--color-platinum);
-    font-weight: 800;
-    font-size: 2rem;
-    transition: 0.5s;
-    -webkit-text-stroke: 1px var(--color-platinum);
-    animation: title-opacity 5s ease-out;
-  }
-  h1:hover {
-    color: transparent;
-  }
-}
-.background-loader::before {
-  content: "";
-  background-image: url("/src/assets/images/home/home_background_nicola-schneider.jpeg");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  animation: background-opacity 5s ease-out;
+    opacity: 1;
+    text-align: center;
+    height: 100vh;
+    .logo-text-div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        #logo-svg {
+            fill: var(--logo-color);
+            stroke: var(--logo-color);
+            height: 150px;
+            width: 150px;
+            stroke-width: 0;
+            stroke-dasharray: 16000;
+            fill-opacity: 0;
+            animation: logo-animation 5s ease-in;
+        }
+        .logo-text {
+            opacity: 0;
+            color: var(--logo-font-color);
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            animation: logo-text-animation 5s ease-in;
+        }
+    }
+    .home-title-div {
+        position: absolute;
+        align-self: flex-end;
+        bottom: 35vh;
+        width: 100%;
+        color: var(--color-platinum);
+        font-weight: 800;
+        font-size: 2rem;
+        -webkit-text-stroke: 1px var(--color-platinum);
+        animation: title-opacity 5s ease-out;
+        h1, h2 {
+            transition: 0.5s;
+        }
+        h1:hover, h2:hover {
+            color: transparent;
+        }
+        .home-subtitle-div {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            column-gap: 5rem;
+            row-gap: 1rem;
+            font-size: 1.2rem;
+            .home-contact-div {
+                font-size: 1.2rem;
+                min-width: 250px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                background: var(--color-midnight);
+                padding: 0.5rem 0.8rem;
+                border: 50px;
+                border-radius: 23px;
+            }
+            color: inherit;
+            text-decoration: none;
+            a {
+                display: flex;
+                justify-content: center;
+                svg {
+                    font-size: 1.5rem;
+                }
+            }
+            a, a:visited, a:hover, a:active {
+                display: flex;
+                justify-content: center;
+                color: inherit;
+                text-decoration: none;
+            }
+            a:hover {
+                color: var(--color-light-black);
+            }
+        }
+    }
 }
 
-@media screen and (min-width: 601px){
-  .background-loader h1 {
-    font-size: 3rem;
-    -webkit-text-stroke: 2px var(--color-platinum);
-  }
+.background-loader::before {
+    content: "";
+    background-image: url("/src/assets/images/home/home_background_nicola-schneider.jpeg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: background-opacity 5s ease-out;
 }
-@media screen and (min-width: 751px){
-  .background-loader h1 {
-    font-size: 4rem;
-    -webkit-text-stroke: 3px var(--color-platinum);
-  }
+
+@media screen and (min-width: 601px) {
+    .background-loader {
+        h1 {
+            font-size: 3rem;
+            -webkit-text-stroke: 2px var(--color-platinum);
+        }
+        h2, label {
+            font-size: 1.2rem;
+        }
+        .home-title-div {
+            .home-subtitle-div {
+                a {
+                    svg {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
-@media screen and (min-width: 901px){
-  .background-loader h1 {
-    font-size: 5rem;
-    -webkit-text-stroke: 4px var(--color-platinum);
-  }
+
+@media screen and (min-width: 751px) {
+    .background-loader {
+        h1 {
+            font-size: 4rem;
+            -webkit-text-stroke: 3px var(--color-platinum);
+        }
+        h2, label {
+            font-size: 1.4rem;
+        }
+        .home-title-div {
+            .home-subtitle-div {
+                a {
+                    svg {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
 }
-@media screen and (min-width: 1051px){
-  .background-loader h1 {
-    font-size: 6rem;
-    -webkit-text-stroke: 4px var(--color-platinum);
-  }
+
+@media screen and (min-width: 901px) {
+    .background-loader {
+        h1 {
+            font-size: 5rem;
+            -webkit-text-stroke: 4px var(--color-platinum);
+        }
+        h2, label {
+            font-size: 2rem;
+        }
+        .home-title-div {
+            .home-subtitle-div {
+                a {
+                    svg {
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1051px) {
+    .background-loader {
+        h1 {
+            font-size: 6rem;
+            -webkit-text-stroke: 4px var(--color-platinum);
+        }
+        h2, label {
+            font-size: 2.5rem;
+        }
+
+    }
+    .home-title-div {
+        .home-subtitle-div {
+            a {
+                svg {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
 }
 
 @keyframes background-opacity {
-  0% {
-    opacity: 30%;
-  }
-  75% {
-    opacity: 30%;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 30%;
+    }
+    75% {
+        opacity: 30%;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes title-opacity {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes logo-animation {
-0% {
-  z-index: 99;
-  stroke-dashoffset: 16000;
-    fill-opacity: 0;
-    stroke-width: 20px;
-  }
-  40% {
-    z-index: 99;
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-    stroke-width: 1px;
-  }
-  65% {
-    z-index: 99;
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-    stroke-width: 1px;
-  }
-  75% {
-    z-index: 99;
-    fill-opacity: 0;
-    stroke-width: 0;
-    display: none;
-  }
+    0% {
+        z-index: 99;
+        stroke-dashoffset: 16000;
+        fill-opacity: 0;
+        stroke-width: 20px;
+    }
+    40% {
+        z-index: 99;
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+        stroke-width: 1px;
+    }
+    65% {
+        z-index: 99;
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+        stroke-width: 1px;
+    }
+    75% {
+        z-index: 99;
+        fill-opacity: 0;
+        stroke-width: 0;
+        display: none;
+    }
 }
+
 @keyframes logo-text-animation {
-  0% {
-    z-index: 99;
-    opacity: 0;
-  }
-  40% {
-    z-index: 99;
-    opacity: 1;
-  }
-  65% {
-    z-index: 99;
-    opacity: 1;
-  }
-  75% {
-    z-index: 99;
-    opacity: 0;
-  }
+    0% {
+        z-index: 99;
+        opacity: 0;
+    }
+    40% {
+        z-index: 99;
+        opacity: 1;
+    }
+    65% {
+        z-index: 99;
+        opacity: 1;
+    }
+    75% {
+        z-index: 99;
+        opacity: 0;
+    }
 }

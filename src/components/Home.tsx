@@ -1,5 +1,7 @@
 import '../assets/styles/Home.css'
 import {useTranslation} from "react-i18next"
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIconOutlined from "@mui/icons-material/EmailOutlined";
 
 const Home = () => {
     const { t} = useTranslation()
@@ -32,7 +34,22 @@ const Home = () => {
                 </svg>
                 <h2 className="logo-text">nicola schneider</h2>
             </div>
-            <h1>{t("pageTitle")}</h1>
+            <div className="home-title-div">
+                <h1>{t("pageTitle")}</h1>
+                <div className="home-subtitle-div">
+                    <h2>{t("pageSubTitle")}</h2>
+                    <div className="home-contact-div">
+                        <label>{t("pageContactMe")}</label>
+                        <a href="mailto:contact@nicolaschneider.ch" target="_blank" rel="noopener noreferrer">
+                            <EmailIconOutlined/>
+                        </a>
+                        <a className="home-github" href="https://github.com/develop-nicolaschneider" target="_blank"
+                           rel="noopener noreferrer">
+                            <GitHubIcon/>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
