@@ -60,6 +60,27 @@ i18n.use(initReactI18next).init({
 
                 // Career
                 careerTitle: "Career",
+                // Gibb
+                hasLinkGibb: "https://gibb.ch",
+                cardTitleGibb: "Education",
+                cardContentGibb: "4 year apprenticeship as an IT-Specialist in application development starting in summer 2017.\n" +
+                    "Parallel vocational and technical high school diploma.",
+                // SIX
+                hasLinkSix: "https://www.six-group.com/en/home.html",
+                cardTitleSix: "Working@SIX",
+                cardContentSix: "Started 2017 my apprenticeship at SIX and since my successful graduation I am working as a Software Engineer.\n" +
+                    "Short break due to the military recruitment school in summer 2022.",
+                // BFH
+                hasLinkBfh: "https://www.bfh.ch/en/studies/bachelor/computer-science/",
+                cardTitleBfh: "Bachelor of Science in Computer Science",
+                cardContentBfh: "Started my study in autumn 2023.\n" +
+                    "Part time study over 4 years at Berns University of Applied Sciences.",
+                // Skillset
+                hasLinkSkills: "",
+                cardTitleSkills: "Skills",
+                cardContentSkills: "JavaScript / TypeScripts / Java / Kotlin \n" +
+                    "Testing: Unit, Jest, QF-Test\n" +
+                    "Frontend: ReactsJS / Java Swing",
             }
         },
         de: {
@@ -112,6 +133,26 @@ i18n.use(initReactI18next).init({
 
                 // Career
                 careerTitle: "Karriere",
+                // Gibb
+                hasLinkGibb: "https://gibb.ch",
+                cardTitleGibb: "Ausbildung",
+                cardContentGibb: "4 jährige Berufslehre als Informatiker Applikationsentwicklung im Sommer 2017.\n" +
+                    "Parallel wurde die technische Berufsmaturität besucht.",
+                // SIX
+                hasLinkSix: "https://www.six-group.com/de/home.html",
+                cardTitleSix: "Working@SIX",
+                cardContentSix: "2017 habe ich meine Berufslehre bei SIX gestartet. Seit dem erfolgreichem Abschluss arbeite ich als Softwareentwickler.\n" +
+                    "Kurzer Unterbruch durch die Rekrutenschule im Sommer 2022",
+                // BFH
+                hasLinkBfh: "https://www.bfh.ch/de/studium/bachelor/informatik/",
+                cardTitleBfh: "Bachelor of Science in Computer Science",
+                cardContentBfh: "Im Herbst 2023 habe ich das Teilzeit-Bachelorstudium in Informatik an der Berner Fachhochschule gestartet.",
+                // Skillset
+                hasLinkSkills: "",
+                cardTitleSkills: "Skills",
+                cardContentSkills: "JavaScript / TypeScripts / Java / Kotlin \n" +
+                    "Testing: Unit, Jest, QF-Test\n" +
+                    "Frontend: ReactsJS / Java Swing",
             }
         }
     }

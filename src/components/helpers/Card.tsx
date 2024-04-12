@@ -9,9 +9,8 @@ type CardProps = {
 
 function Card({cardImgPath, hasLink, cardTitle, cardText}: CardProps) {
     const imgDiv2 =
-        <div className="card-image">
-            {/*<img src={props.cardImgPath} alt="card" className="card-image"/>*/}
-            {cardImgPath}
+        <div className="card-image-div">
+            <img id={cardTitle.toLowerCase()+"-img"} src={cardImgPath} alt="card" className="card-image"/>
         </div>
     let imgDiv
     if (hasLink !== "") {

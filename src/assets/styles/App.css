@@ -16,8 +16,14 @@
     --color-light-blue: #c5fdf5;
     --color-white: #ffffff;
 
+    --color-platinum-transparent: #E6E6E660;
+    --color-dark-gray-transparent: #44434360;
+    --color-cerulean-transparent: #01688660;
+    --box-shadow-color: #015F7A90;
+
     /* color vars */
     --background-color: var(--color-platinum);
+    --background-color-transparent: var(--color-platinum-transparent);
     --font-color: var(--color-black);
     --title-color: var(--color-cerulean);
     --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
@@ -47,6 +53,7 @@
 /* dark-theme-colors*/
 [color-theme="dark"] {
     --background-color: var(--color-dark-gray);
+    --background-color-transparent: var(--color-dark-gray-transparent);
     --font-color: var(--color-white);
     --title-color: var(--color-cerulean);
     --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));
@@ -64,6 +71,7 @@
 /* colored-theme-colors*/
 [color-theme="colored"] {
     --background-color: var(--color-midnight);
+    --background-color-transparent: var(--color-cerulean-transparent);
     --font-color: var(--color-black);
     --title-color: var(--color-cerulean);
     --loader-gradient-background: linear-gradient(to bottom right, var(--color-midnight), var(--color-light-blue));

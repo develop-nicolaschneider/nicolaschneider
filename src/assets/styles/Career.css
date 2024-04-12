@@ -7,7 +7,7 @@
     padding: 2rem;
 
     width: 100%;
-    .about-image {
+    .career-image {
         position: sticky;
         bottom: 0;
         top: 100px;
@@ -16,8 +16,7 @@
         width: 450px;
         border-radius: 30px;
         object-fit: cover;
-        border: 1px solid #ffffff02;
-        box-shadow: 0 4px 15px 0 #ffffff40;
+        box-shadow: 8px 8px var(--box-shadow-color);
     }
     .cards {
         flex: 3;
@@ -29,34 +28,37 @@
 }
 
 .card {
+    backdrop-filter: blur(50px);
     border-radius: 30px;
     min-width: 250px;
     max-width: 350px;
     height: 500px;
-    background: var(--gradient-background-opacity);
-    backdrop-filter: blur(20px);
-    border: 1px solid #ffffff02;
-    box-shadow: 0 4px 15px 0 #ffffff40;
+    background: var(--background-color-transparent);
+    box-shadow: 8px 8px var(--box-shadow-color);
 }
-.card-image {
+.card-image-div {
     border-radius: 30px;
     height: 300px;
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 2px 0 var(--box-shadow-color);
     img {
-        object-fit: cover;
+        height: 250px;
+        max-width: 80%;
+        object-fit: contain;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%,-50%);
         transition: 300ms;
     }
 }
-.card-image:hover {
+.card-image-div:hover {
     img {
-        transform: translateX(-50%) scale(1.1);
-
+        transform: translate(-50%,-50%) scale(1.2);
     }
 }
 .card-description {
+    white-space: pre-line;
     display: flex;
     flex-direction: column;
     padding: 10px;
